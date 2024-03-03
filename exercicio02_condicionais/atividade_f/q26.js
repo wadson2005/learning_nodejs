@@ -1,4 +1,3 @@
-
 import { question } from "readline-sync";
 
 // Função para calcular a hipotenusa
