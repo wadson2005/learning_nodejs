@@ -18,7 +18,9 @@ function decomporNumero(numero) {
     let resultado = "";
     if (centenas > 0) {
         resultado += centenas + (centenas === 1 ? " centena" : " centenas");
-        if (dezenas > 0 || unidades > 0) {
+        if (dezenas > 0 && unidades > 0) {
+            resultado += ", ";
+        } else if(dezenas > 0 || unidades > 0) {
             resultado += " e ";
         }
     }
@@ -34,6 +36,8 @@ function decomporNumero(numero) {
         resultado += unidades + (unidades === 1 ? " unidade" : " unidades");
     }
 
+    resultado += ".";
+    
     return resultado;
 }
 
